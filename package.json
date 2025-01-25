@@ -2,8 +2,10 @@
   "name": "project_hospi",
   "version": "1.0.0",
   "main": "index.js",
+   "type": "module",
   "scripts": {
-    "test": "dev"
+    "dev": "nodemon index.js",
+    "start":"node index.js"
   },
   "author": "Felipe Cabral",
   "license": "ISC",
