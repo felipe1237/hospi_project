@@ -1,0 +1,40 @@
+body{
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+.conteinner_camas{
+
+  width:80%;
+  height:60%;
+  display: flex;
+  border:2px solid #000;
+  border-radius:10px;
+  flex-wrap: wrap;
+
+}
+
+
+.cama{
+   height:10%;
+   width:10%;
+   border:1px solid #000;
+   border-radius:5px;
+   margin:2px;
+   
+
+}
+.cama:hover{
+
+
+    cursor:pointer;
+    background-color: #e7e6e6;
+}

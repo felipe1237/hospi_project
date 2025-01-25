@@ -11,4 +11,44 @@ router.get('/home',(req,res)=>{
 })
 
 
+router.get('/1-3',(req,res)=>{
+
+
+    res.render("sala_1-3.pug");
+});
+
+
+
+router.get('/2-4',(req,res)=>{
+
+
+    res.render("sala_2-4.pug");
+});
+
+
+router.get('/6-neo2',(req,res)=>{
+
+    res.render("sala_6-neo2.pug");
+
+});
+
+router.get('/5-G.P',(req,res)=>{
+
+
+    res.render("sala_5.pug");
+});
+
+router.get('/G.A',(req,res)=>{
+
+    res.render("sala_guarAdul.pug");
+
+});
+
+router.get('/8-S.M',(req,res)=>{
+
+
+    res.render("sala_8.pug");
+});
+
+
 export default router;
