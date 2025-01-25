@@ -1,0 +1,43 @@
+body{
+
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.conteinner{
+
+
+   margin-top: 10%;
+    width: 30%;
+    height: 20%;
+    border:2px solid #000;
+    display:flex;
+    border-radius:10px;
+    
+}
+
+.salas_conteinner{
+
+  width: 50%;
+  height: 50%;
+  border:1px solid #000;
+  align-self: center;
+  margin: 2px;
+  border-radius:5px;
+
+
+
+}
+
+.salas_conteinner:hover{
+
+
+    cursor:pointer;
+    background:#ebe8e8;
+}

@@ -2,15 +2,16 @@
   "name": "project_hospi",
   "version": "1.0.0",
   "main": "index.js",
-   "type": "module",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start":"node index.js"
+    "dev": "nodemon --env-file .env index.js",
+    "start": "node index.js"
   },
   "author": "Felipe Cabral",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^4.21.2",
     "pug": "^3.0.3"
   },
