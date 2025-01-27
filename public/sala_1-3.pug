@@ -11,7 +11,7 @@ html(lang="en")
           input.inputs(type="text", name="name",placeholder="Nombre")
           input.inputs(type="text",name="surname",placeholder="Apellido")
           label(for="dino-select") Dietas
-          select (id="dino-select")
+          select(id="dino-select",name="Dieta")
              optgroup(label="Dieta")
                 option General
                 option AG Con Carne
@@ -65,7 +65,7 @@ html(lang="en")
   
           textarea.textarea(name="Observations", cols="30", rows="10",placeholder="Observaciones") 
           input(type="submit", value="Guardar")
-          input(type="submit",value="Eliminar") 
+          input(type="button",value="Eliminar",id="btn_eliminar") 
 
        div.conteinner_camas
           div.cama 1

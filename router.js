@@ -18,6 +18,16 @@ router.get('/1-3',(req,res)=>{
 });
 
 
+router.post('/1-3',(req,res)=>{
+
+
+console.log("Este es el body",req.body);
+
+res.send("Validacion exitosa");
+
+});
+
+
 
 router.get('/2-4',(req,res)=>{
 
