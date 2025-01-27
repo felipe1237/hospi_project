@@ -25,20 +25,47 @@ html(lang="en")
                 option Enteral
                 option Hiposódico
           div.radio_conte
-             input(type="radio",name="familiar",value="Familiar",id="radiobutton")
+             input(type="checkbox",name="familiar",value="Familiar",id="radiobutton")
              label Familiar
 
           input.inputs(type="text",id="Colaciones",list="options",placeholder="Colaciones")
           datalist(id="options")
-             option(value="Opción 2")
-             option(value="Opción 3")
-             option(value="Opción 4")
-             option(value="Opción 5")
+             option(value="Azucar")
+             option(value="Pan")
+             option(value="Manteca")
+             option(value="Dulce de leche")
+             option(value="Dulce de batata o membrillo")
+             option(value="Arroz,fideo o polenta") 
+             option(value="Merenguitos") 
+             option(value="Crema de leche") 
+             option(value="Gelatina Dietetica") 
+             option(value="Leche Descremada") 
+             option(value="Arroz con leche") 
+             option(value="Durazno natural") 
+             option(value="Licuado de frutas") 
+             option(value="Compota") 
+             option(value="Huevo duro o poche") 
+             option(value="Galletas de arroz") 
+             option(value="Crema maicena") 
+             option(value="Rollitos de jamón y queso") 
+             option(value="Leche deslactosada") 
+             option(value="Licuado de frutas con leche") 
+             option(value="Flan con o sin Caramelo") 
+             option(value="Vegetales crudos o cocidos") 
+             option(value="Frutas") 
+             option(value="Queso") 
+             option(value="Yogur") 
+             option(value="Chipacitos") 
+             option(value="Ensalada de frutas") 
+             option(value="Jugo de frutas") 
+             option(value="bife") 
+             option(value="Queso y dulce")
 
           
   
           textarea.textarea(name="Observations", cols="30", rows="10",placeholder="Observaciones") 
-          input(type="submit", value="submit") 
+          input(type="submit", value="Guardar")
+          input(type="submit",value="Eliminar") 
 
        div.conteinner_camas
           div.cama 1
