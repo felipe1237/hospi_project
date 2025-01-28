@@ -8,6 +8,7 @@ html(lang="en")
     body 
        h1 1-3
        form.formulario_data_user(action="/1-3", method="post")
+          button.cerrar(type="button") X
           input.inputs(type="text", name="name",placeholder="Nombre")
           input.inputs(type="text",name="surname",placeholder="Apellido")
           label(for="dino-select") Dietas
@@ -28,7 +29,7 @@ html(lang="en")
              input(type="checkbox",name="familiar",value="Familiar",id="radiobutton")
              label Familiar
 
-          input.inputs(type="text",id="Colaciones",list="options",placeholder="Colaciones")
+          input.inputs(type="text",id="Colaciones",list="options",placeholder="Colaciones",name="Colacion")
           datalist(id="options")
              option(value="Azucar")
              option(value="Pan")

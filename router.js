@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { Insert_Data_Into_Table } from "./dbConnection.js";
 
 
 const router=new Router();
@@ -22,6 +23,8 @@ router.post('/1-3',(req,res)=>{
 
 
 console.log("Este es el body",req.body);
+const resu=req.body;
+// Insert_Data_Into_Table(resu.name,);
 
 res.send("Validacion exitosa");
 

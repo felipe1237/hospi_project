@@ -87,7 +87,32 @@ try {
 
 
 
+const Insert_Data_Into_Table=async(sala,cam_num,pac,indi,obs)=>{
+
+
+const query=`INSERT INTO dietas (sala,numero_cama,paciente,indicacionAlimentaria,observaciones) VALUES (sala,cam_num,pac,indi,obs)`
+
+try{
+
+  const result=await conector.query(query);
+
+  return result;
+
+
+}catch(err){
+  console.log(err);
+
+  throw err;
+
+
+}
+
+}
+
+
+
+
     
-    export {Create_table_usuarios,Create_table_dietas}
+    export {Create_table_usuarios,Create_table_dietas,Insert_Data_Into_Table}
     export default connection;
 

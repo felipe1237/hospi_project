@@ -34,6 +34,28 @@ body{
 }
 
 
+.cerrar{
+
+align-self:flex-end;
+
+font-size:xx-large;
+color:#f00;
+border:none;
+font-weight: 700;
+background-color: var(--background-color);
+
+
+}
+
+
+.cerrar:hover{
+
+
+  color:#ec6a6a;
+  cursor:pointer;
+  
+}
+
 .cama{
    height:10%;
    width:10%;
@@ -56,12 +78,13 @@ body{
     width: 30%;
     border: 2px solid #000;
     border-radius:10px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     position:absolute;
     background-color: var(--background-color);
     box-shadow: 10px 10px 10px #000;
+
     
 
 
@@ -111,3 +134,4 @@ body{
     justify-self:center;
     align-self: center;
   }
+
