@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Insert_Data_Into_Table } from "./dbConnection.js";
+import { get_data_salas, Insert_Data_Into_Table } from "./dbConnection.js";
 
 
 const router=new Router();
@@ -19,14 +19,31 @@ router.get('/1-3',(req,res)=>{
 });
 
 
-router.post('/1-3',(req,res)=>{
+router.get('/1-3/sal',async(req,res)=>{
+
+const resu= await get_data_salas(req.query.sala);
+
+
+console.log("Este es el resulta de lapeticion",resu);
+      
+res.json({resultado:resu});
+});
+
+
+router.post('/1-3',async (req,res)=>{
 
 
 console.log("Este es el body",req.body);
 const resu=req.body;
-// Insert_Data_Into_Table(resu.name,);
 
-res.send("Validacion exitosa");
+//(sala,numero_cama,paciente,indicacionAlimentaria,observaciones
+ const insertado=await Insert_Data_Into_Table(resu.nombre_sala,parseInt(resu.num_cama),resu.name+' '+resu.surname,resu.Dieta,resu.Observations);
+
+
+ console.log("Valores insertados ",insertado);
+
+
+res.redirect('/1-3');
 
 });
 

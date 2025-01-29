@@ -135,3 +135,11 @@ background-color: var(--background-color);
     align-self: center;
   }
 
+
+
+  .textarea{
+   width: 80%;
+   resize: none;
+
+
+  }

@@ -90,7 +90,7 @@ try {
 const Insert_Data_Into_Table=async(sala,cam_num,pac,indi,obs)=>{
 
 
-const query=`INSERT INTO dietas (sala,numero_cama,paciente,indicacionAlimentaria,observaciones) VALUES (sala,cam_num,pac,indi,obs)`
+const query=`INSERT INTO dietas (sala,numero_cama,paciente,indicacionAlimentaria,observaciones) VALUES ('${sala}',${cam_num},'${pac}','${indi}','${obs}')`
 
 try{
 
@@ -111,8 +111,38 @@ try{
 
 
 
+const get_data_salas=async(sala)=>{
+
+ const query=`SELECT *FROM dietas WHERE sala=?`
+
+   try{
+
+     const result =await conector.query(query,[sala]);
+
+     return result;
+
+
+   }catch(err){
+       console.log(err)
+
+       throw err;
+
+
+
+   }
+
+
+}
+
+
+
+
+
+
+
+
 
     
-    export {Create_table_usuarios,Create_table_dietas,Insert_Data_Into_Table}
+    export {Create_table_usuarios,Create_table_dietas,Insert_Data_Into_Table,get_data_salas}
     export default connection;
 

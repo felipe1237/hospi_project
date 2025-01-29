@@ -6,14 +6,16 @@ html(lang="en")
         link(rel="stylesheet", href="./styles/style_1-3.css")
         title Sala 1-3
     body 
-       h1 1-3
+       h1 Sala 1-3 Medica Clinica
        form.formulario_data_user(action="/1-3", method="post")
           button.cerrar(type="button") X
-          input.inputs(type="text", name="name",placeholder="Nombre")
-          input.inputs(type="text",name="surname",placeholder="Apellido")
+          input(type="hidden",id="infoAdicionalInput",name="nombre_sala",value="1-3")
+          input(type="hidden",id="nro_cama",name="num_cama")
+          input.inputs(id="name",type="text", name="name",placeholder="Nombre")
+          input.inputs(id="surname",type="text",name="surname",placeholder="Apellido")
           label(for="dino-select") Dietas
-          select(id="dino-select",name="Dieta")
-             optgroup(label="Dieta")
+          select(id="dietas",name="Dieta")
+             optgroup(id="dieta",label="Dieta")
                 option General
                 option AG Con Carne
                 option AG Sin Carne
@@ -28,7 +30,6 @@ html(lang="en")
           div.radio_conte
              input(type="checkbox",name="familiar",value="Familiar",id="radiobutton")
              label Familiar
-
           input.inputs(type="text",id="Colaciones",list="options",placeholder="Colaciones",name="Colacion")
           datalist(id="options")
              option(value="Azucar")
@@ -64,7 +65,7 @@ html(lang="en")
 
           
   
-          textarea.textarea(name="Observations", cols="30", rows="10",placeholder="Observaciones") 
+          textarea.textarea(id="textarea",name="Observations", cols="30", rows="10",placeholder="Observaciones") 
           input(type="submit", value="Guardar")
           input(type="button",value="Eliminar",id="btn_eliminar") 
 
