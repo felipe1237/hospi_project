@@ -68,6 +68,7 @@ const query=`CREATE TABLE IF NOT EXISTS dietas(
   numero_cama INT NOT NULL,
   paciente VARCHAR(255) NOT NULL,
   indicacionAlimentaria VARCHAR(255) NOT NULL,
+  Colaciones VARCHAR(255) NOT NULL,
   observaciones VARCHAR(255) NOT NULL);`
 
 
@@ -87,10 +88,10 @@ try {
 
 
 
-const Insert_Data_Into_Table=async(sala,cam_num,pac,indi,obs)=>{
+const Insert_Data_Into_Table=async(sala,cam_num,pac,indi,col,obs)=>{
 
 
-const query=`INSERT INTO dietas (sala,numero_cama,paciente,indicacionAlimentaria,observaciones) VALUES ('${sala}',${cam_num},'${pac}','${indi}','${obs}')`
+const query=`INSERT INTO dietas (sala,numero_cama,paciente,indicacionAlimentaria,Colaciones,observaciones) VALUES ('${sala}',${cam_num},'${pac}','${indi}','${col}','${obs}')`
 
 try{
 
@@ -137,12 +138,31 @@ const get_data_salas=async(sala)=>{
 
 
 
+const delete_data_pacientes=async(id)=>{
+
+const query=`DELETE FROM dietas WHERE id=?`
+
+try{
+
+  const result=await conector.query(query,[id]);
+}catch(err){
+
+  console.log(err);
+  throw err;
+
+
+}
+
+
+}
+
+
 
 
 
 
 
     
-    export {Create_table_usuarios,Create_table_dietas,Insert_Data_Into_Table,get_data_salas}
+    export {Create_table_usuarios,Create_table_dietas,Insert_Data_Into_Table,get_data_salas,delete_data_pacientes}
     export default connection;
 
